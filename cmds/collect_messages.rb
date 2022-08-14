@@ -21,8 +21,20 @@ class Collect_msg
   end
 
 
-  slash("generate","generate a message") do |i|
-    i.post(@m.generate_sentence,ephemeral: false)
+  slash("generate","generate a message",{
+    "size" => {
+      type: :integer,
+      optional: true,
+      description: "number of words"
+     }
+  }) do |i,size|
+
+    if size == nil
+      i.post(@m.generate_sentence(rand(0..20)),ephemeral: false)
+    else
+      i.post(@m.generate_sentence(size),ephemeral: false)
+    end
+
   end
 
   def save(txt)

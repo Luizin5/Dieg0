@@ -19,14 +19,18 @@ class Textgen
     src.split.each { |a| @palavras[a] = [] }
   end
 
-  def generate_sentence
-    sentence = []
+  def generate_sentence(size)
+    new_sentence(size).join(" ")
+  end
+
+  def new_sentence(x)
     palavra = @palavras[@palavras.keys.sample].sample
-    rand(5..15).times {
+    sentence = []
+    x.times {
       palavra = @palavras[palavra].sample
       sentence << palavra
     }
-    sentence.join(" ")
+    sentence
   end
 
 end
