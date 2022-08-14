@@ -3,7 +3,7 @@ Dieg0 is a discord bot that use markov chains to generate text using messages se
 
 Dieg0 is is a open source version of [Markov Bot](https://top.gg/bot/903354338565570661)
 
-# How to run
+# How to execute
 create a file named ```.env``` and put 
 ```
 TOKEN=YOURBOTTOKEN
@@ -20,6 +20,3 @@ and
 discorb setup
 ```
 to register slash commands
-
-#### Dieg0 is under development
-# Dieg0
